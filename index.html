@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandScope Real Estate</title>
+    <title>LandScope Procurement</title>
 
     <style>
         * {
@@ -24,15 +24,34 @@
             padding: 20px 50px;
         }
 
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
         .logo {
             font-size: 28px;
             font-weight: bold;
         }
 
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         .hero {
             height: 400px;
-            background: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
-                        url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600');
+            background:
+                linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5)),
+                url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1600');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -62,9 +81,14 @@
             color: #0c2340;
         }
 
+        .section p {
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
         .properties {
             display: grid;
-            grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
         }
 
@@ -87,6 +111,7 @@
 
         .property-card h3 {
             margin-bottom: 10px;
+            color: #0c2340;
         }
 
         .form-section {
@@ -98,6 +123,7 @@
 
         .form-section h2 {
             margin-bottom: 20px;
+            color: #0c2340;
         }
 
         iframe {
@@ -113,48 +139,80 @@
             padding: 30px;
             margin-top: 50px;
         }
+
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 10px;
+            }
+
+            .hero-content h1 {
+                font-size: 36px;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+            }
+        }
     </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">LandScope Real Estate</div>
+    <div class="header-container">
+        <div class="logo">LandScope Real Estate</div>
+
+        <nav>
+            <a href="index.html">Procurement</a>
+            <a href="careers.html">Careers</a>
+        </nav>
+    </div>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Find Your Dream Property</h1>
-        <p>Premium Real Estate Solutions Across Residential and Commercial Markets</p>
+        <h1>Procurement Portal</h1>
+        <p>Supplier Registration, Tender Applications and Procurement Opportunities</p>
     </div>
 </section>
 
 <section class="section">
-    <h2>Featured Properties</h2>
+    <h2>Procurement Opportunities</h2>
+
+    <p>
+        Welcome to the LandScope Procurement Portal. Suppliers and service providers
+        can submit procurement requests, participate in tenders, and manage their
+        interactions with LandScope through the forms below.
+    </p>
 
     <div class="properties">
 
         <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200" alt="">
+            <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200" alt="Supplier Registration">
             <div class="property-card-content">
-                <h3>Luxury Villa</h3>
-                <p>4 Bedrooms • Pool • Sea View</p>
+                <h3>Supplier Registration</h3>
+                <p>Register your company as an approved supplier.</p>
             </div>
         </div>
 
         <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1460317442991-0ec209397118?q=80&w=1200" alt="">
+            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1200" alt="Tender Submission">
             <div class="property-card-content">
-                <h3>Modern Apartment</h3>
-                <p>City Center • 3 Bedrooms</p>
+                <h3>Tender Submission</h3>
+                <p>Submit proposals for active procurement opportunities.</p>
             </div>
         </div>
 
         <div class="property-card">
-            <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?q=80&w=1200" alt="">
+            <img src="https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?q=80&w=1200" alt="Vendor Management">
             <div class="property-card-content">
-                <h3>Commercial Space</h3>
-                <p>Prime Business Location</p>
+                <h3>Vendor Management</h3>
+                <p>Maintain supplier information and supporting documents.</p>
             </div>
         </div>
 
@@ -163,13 +221,13 @@
 
 <section class="section">
     <div class="form-section">
-        <h2>Property Inquiry Form</h2>
+
+        <h2>Procurement Forms</h2>
 
         <iframe
-            src="https://landscope--dev03web.sandbox.my.site.com/LWRTestApp2"
-            width="100%"
-            height="800px"
-            style="border:none;">
+            src="https://landscope--dev03web.sandbox.my.site.com/LWRTestApp2?pageType=Procurement"
+            height="800"
+            title="Procurement Forms">
         </iframe>
 
     </div>
